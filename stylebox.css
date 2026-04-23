@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: whitesmoke;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+
+.box {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+}
+
+
+.blue { background: blue border-box; }
+.green { background: green; }
+.red { background: red; }
+.yellow { background: yellow; }
+
+
+.blue   { top: 0; left: 0; }
+.green  { top: 0; right: 0; }
+.yellow { bottom: 0; right: 0; }
+.red    { bottom: 0; left: 0; }
+
+
+.blue {
+  animation: moveblue 4s linear infinite;
+}
+
+.green {
+  animation: movegreen 4s linear infinite;
+}
+
+.yellow {
+  animation: moveyellow 4s linear infinite;
+}
+
+.red {
+  animation: movered 4s linear infinite;
+}
+
+
+@keyframes moveblue {
+  0%   { top: 0; left: 0; }
+  25%  { top: 0; left: 220px; }
+  50%  { top: 220px; left: 220px; }
+  75%  { top: 220px; left: 0; }
+  100% { top: 0; left: 0; }
+}
+
+@keyframes movegreen {
+  0%   { top: 0; left: 220px; }
+  25%  { top: 220px; left: 220px; }
+  50%  { top: 220px; left: 0; }
+  75%  { top: 0; left: 0; }
+  100% { top: 0; left: 220px; }
+}
+
+
+@keyframes moveyellow {
+  0%   { top: 220px; left: 220px; }
+  25%  { top: 220px; left: 0; }
+  50%  { top: 0; left: 0; }
+  75%  { top: 0; left: 220px; }
+  100% { top: 220px; left: 220px; }
+}
+
+@keyframes movered {
+  0%   { top: 220px; left: 0; }
+  25%  { top: 0; left: 0; }
+  50%  { top: 0; left: 220px; }
+  75%  { top: 220px; left: 220px; }
+  100% { top: 220px; left: 0; }
+}
